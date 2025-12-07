@@ -6,14 +6,15 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
+    /* Softer teal/green palette (gentle contrast) */
+    --primary-color: #2f8f84; /* soft teal */
+    --secondary-color: #246a60; /* deeper teal */
+    --accent-color: #6cc4b9; /* lighter accent */
     --text-dark: #1f2937;
     --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --bg-light: #f7fbfa; /* slightly warmer than pure white */
     --bg-white: #ffffff;
-    --border-color: #e5e7eb;
+    --border-color: #e6efee;
     --success-color: #10b981;
     --error-color: #ef4444;
 }
@@ -297,8 +298,9 @@ body {
 
 .about-image img {
     width: 100%;
-    height: auto;
+    height: 400px; /* fixed height to create a consistent crop */
     display: block;
+    object-fit: cover; /* crop rectangular images nicely */
 }
 
 .about-content h2 {
