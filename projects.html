@@ -194,21 +194,57 @@
                 <img src="images/project_spinal.jpg" alt="Spinal cord model" onerror="this.src='images/placeholder.svg'">
             </div>
             <div class="modal-details">
-                <h3>Project Overview</h3>
-                <p>Designed and fabricated microfluidic chips (SolidWorks) and GelMA hydrogel models to replicate spinal cord injury microsystems and assess material performance.</p>
+                <h3>What we were building (the point)</h3>
+                <p>The goal was to experimentally determine how far 405&nbsp;nm light penetrates into a GelMA photocrosslinking hydrogel — an essential parameter for assessing whether a light‑cured implant could fully polymerize within a spinal cord injury site. A previous simulation predicted depth of cure; my task was to design and execute an experiment to validate (or challenge) those predictions using a controlled physical setup.</p>
 
-                <h3>Key Contributions</h3>
+                <h3>Why it was hard</h3>
+                <p>Light propagation in hydrated biomaterials is complex: scattering, absorption, and refractive interfaces all influence photocrosslinking depth. Small geometric or optical artifacts — especially reflections or refraction from the substrate — can cause the apparent cured depth to deviate significantly from true in‑situ behaviour. Creating an experimental setup that isolated the gel’s intrinsic optical properties required careful control of stray light, elimination of indirect curing pathways, and a geometry that allowed precise sectioning of the cured column for visual analysis. Physically meaningful results relied on eliminating every unintended transmission path.</p>
+
+                <h3>What I did (role and methods)</h3>
                 <ul>
-                    <li>Modeled and fabricated microfluidic devices and PDMS phantoms to validate material and system behavior.</li>
-                    <li>Developed GelMA hydrogel degradation and swelling models to identify optimal formulations for in‑situ repair.</li>
-                    <li>Discovered a 3× discrepancy with existing simulations and led a redesign of predictive models.</li>
+                    <li><strong>Experimental design:</strong> Built a controlled setup to expose a vertical GelMA column to 405&nbsp;nm light, enabling direct visual determination of cured vs uncured regions after sectioning.</li>
+                    <li><strong>CAD &amp; prototyping:</strong> Designed SolidWorks master molds for PDMS jigs that cast a uniform cylindrical gel column. Iterated prototype geometries to minimise light leakage or refraction from the PDMS substrate.</li>
+                    <li><strong>Optical isolation:</strong> Designed and fabricated a light‑blocking shroud so only direct, axial illumination reached the gel — preventing PDMS‑induced refraction that could artificially inflate the observed cure depth.</li>
+                    <li><strong>Verification method:</strong> Cured samples, manually sectioned the gel column, and visually identified the boundary between crosslinked and uncrosslinked layers for depth measurement.</li>
+                    <li><strong>Model refinement:</strong> Compared experimental results with the simulation; observed a consistent ~3× lower cured depth than predicted and recommended full optical characterisation (absorption, scattering, refractive index) of GelMA and PDMS to update the model parameters.</li>
                 </ul>
 
-                <h3>Technologies & Methods</h3>
-                <p>SolidWorks, microfabrication, GelMA hydrogel testing, PDMS phantoms, experimental characterization.</p>
+                <h3>Outcome</h3>
+                <p>The experiment demonstrated a significant discrepancy — roughly a threefold overestimation — in the simulation’s predicted cure depth. This prompted a redesign of the optical model and provided the team with a clearer understanding of the constraints on photocuring within tissue‑like environments. The test jig and shroud designs now serve as reusable tools for subsequent characterisation experiments.</p>
 
-                <h3>Outcomes</h3>
-                <p>Refined material formulations and validated microsystem designs for further preclinical assessment.</p>
+                <h3>What I learned</h3>
+                <ul>
+                    <li>Even simple curing experiments require rigorous optical control; substrate‑induced refraction can meaningfully distort results.</li>
+                    <li>CAD iteration is essential for experimental fixtures — small geometric changes can drastically alter light paths.</li>
+                    <li>Photopolymerisation behaviour depends heavily on material‑specific optical properties, not only intensity and exposure time.</li>
+                    <li>Empirical validation is indispensable — simulations can be misleading without accurate material constants.</li>
+                </ul>
+
+                <h3>What I would do differently</h3>
+                <p>With more time I would measure absorption coefficient, scattering coefficient, and refractive index of both GelMA and PDMS to provide accurate optical inputs to the simulation. I would also incorporate quantitative analysis (optical microscopy or mechanical indentation) to obtain a precise numerical depth of cure rather than relying solely on visual inspection.</p>
+
+                <h3>Why I didn’t do that originally</h3>
+                <p>Time constraints limited deeper material characterisation. The priority was to quickly determine whether the existing simulation was directionally accurate. A rapid, well‑controlled empirical experiment provided the clarity needed to prompt simulation revision while keeping the project on schedule.</p>
+
+                <h3>Additional assets</h3>
+                <p>Upload the Mend the Gap video as <code>videos/mend-the-gap.mp4</code> to embed it here. You can also add photos or microscopy images from the sectioned gels and I will include them inline.</p>
+
+                <div class="modal-video" style="margin-top:1rem;">
+                    <video controls width="100%" poster="images/placeholder.svg">
+                        <source src="videos/mend-the-gap.mp4" type="video/mp4">
+                        Your browser does not support the video tag. Upload <code>videos/mend-the-gap.mp4</code> into the repository to enable playback.
+                    </video>
+                </div>
+            </div>
+                <h3>Additional assets</h3>
+                <p>I prepared a local video placeholder — upload your Mend the Gap video as <code>videos/mend-the-gap.mp4</code> and it will appear below. You can also upload additional chip schematics or experimental videos and I will embed them here.</p>
+
+                <div class="modal-video" style="margin-top:1rem;">
+                    <video controls width="100%" poster="images/placeholder.svg">
+                        <source src="videos/mend-the-gap.mp4" type="video/mp4">
+                        Your browser does not support the video tag. Upload <code>videos/mend-the-gap.mp4</code> into the repository to enable playback.
+                    </video>
+                </div>
             </div>
         </div>
     </div>
@@ -252,14 +288,7 @@
                 <p>Given more time I would run a co‑simulation that links microfluidic CFD/flow with the optical readout to better predict assay signal as a function of flow-induced shear and residence time. I would also add more formal EMC testing early in the PCB cycle to further reduce noise risk.</p>
 
                 <h3>Additional assets</h3>
-                <p>I prepared a local video placeholder — upload your Mend the Gap video as <code>videos/mend-the-gap.mp4</code> and it will appear below. You can also upload additional schematics or raw Altium screenshots and I will embed them.</p>
-
-                <div class="modal-video" style="margin-top:1rem;">
-                    <video controls width="100%" poster="images/placeholder.svg">
-                        <source src="videos/mend-the-gap.mp4" type="video/mp4">
-                        Your browser does not support the video tag. Upload <code>videos/mend-the-gap.mp4</code> into the repository to enable playback.
-                    </video>
-                </div>
+                <p>If you have more Rover photos, schematics, or Altium exports you can upload them and I will embed them here. (Note: the Mend the Gap video belongs to the spinal cord project — please upload that video and I will add it to the Mend the Gap modal.)</p>
             </div>
         </div>
     </div>
@@ -268,8 +297,7 @@
         <div class="container">
             <p>&copy; 2025 Danyaal Abbas. All rights reserved.</p>
             <div class="social-links">
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/s-d-abbas/" class="social-link">LinkedIn</a>
                 <a href="contact.html" class="social-link">Contact</a>
             </div>
         </div>
