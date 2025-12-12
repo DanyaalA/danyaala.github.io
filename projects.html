@@ -60,11 +60,11 @@
                             <button class="btn-view" onclick="openModal('modal_bioreactor')">View Details</button>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <h3>Aggregate Bioreactor Platform (CFD Analysis)</h3>
-                        <p class="project-category">Process Development · Bioprocess Engineering</p>
-                        <p>CFD analysis and scale-model parameterization of a Corning ProCulture 500mL disposable spinner flask to identify shear profiles and enable scale-consistent cell culture conditions.</p>
-                    </div>
+                        <div class="project-info">
+                            <h3>Stirred Tank Reactor CFD Analysis</h3>
+                            <p class="project-category">Computational Fluid Dynamics · Process Development</p>
+                            <p>Representative CFD modelling and scale‑parameterisation of a Corning ProCulture 500mL spinner flask to identify shear hotspots and enable scale-consistent conditions for aggregate cell culture.</p>
+                        </div>
                 </div>
 
                 <!-- 3D In-vitro Spinal Cord Modeling -->
@@ -106,42 +106,50 @@
     <div id="modal_bioreactor" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal_bioreactor')">&times;</span>
-            <h2>Ansys Fluent CFD Analysis — Corning ProCulture 500mL Spinner Flask</h2>
-            <div class="modal-images">
-                <img src="images/500mL-spinner.png" alt="500mL Spinner CFD" onerror="this.src='images/placeholder.svg'">
-            </div>
+            <h2>Ansys Fluent CFD Analysis — Corning Proculture 500mL Spinner Flask</h2>
             <div class="modal-details">
-                <h3>What we were building (the point)</h3>
-                <p>The goal was to characterise the internal shear environment of a Corning ProCulture 500mL disposable spinner flask used for aggregate-based cell culture, and to use that information to identify process parameters that produce equivalent shear profiles across scales (125mL, 500mL, 1L). This enabled scale-consistent culture of shear-sensitive cellular spheroids as part of a scalable bioprocess strategy at Aspect Biosystems.</p>
+                <p><strong>Confidentiality note:</strong> The image shown is a representative example based on publicly available geometry. Any CFD data or design details specific to my work at Aspect Biosystems have been excluded to maintain NDA compliance.</p>
 
-                <h3>Why it was hard</h3>
-                <p>Spinner flasks with impellers produce highly localized regions of elevated shear and complex flow patterns. Capturing these correctly requires careful geometric representation of the impeller and realistic boundary conditions. The challenge was to predict peak shear regions that correlate with biological outcomes (spheroid viability and morphology) while keeping simulations computationally tractable for many scale comparisons. Empirical validation is required, so the CFD had to converge to physically realistic results, not just numerically stable solutions.</p>
+                <p style="text-align:center;margin:0.5rem 0;"><img src="images/500mL-spinner.png" alt="Summarized CFD model" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
 
-                <h3>What I did (role and methods)</h3>
+                <h3>Project Overview</h3>
+                <p>The goal was to characterise the internal shear environment of a Corning ProCulture 500mL disposable spinner flask used for aggregate-based cell culture, and to use that information to identify process parameters that produce equivalent shear profiles across multiple scales. This enabled scale-consistent culture of shear-sensitive cellular spheroids as part of a scalable bioprocess strategy at Aspect Biosystems.</p>
+
+                <h3>The Challenge</h3>
+                <p>Stirred-tank reactors, particularly paddle impellers, produce highly localized regions of elevated shear and complex flow patterns. Capturing these correctly requires careful geometric representation of the impeller and realistic boundary conditions. The challenge was to predict peak shear regions that correlate with biological outcomes (spheroid viability and morphology) while keeping simulations computationally tractable for many scale comparisons. Empirical validation is required, so the CFD had to converge to physically realistic results, not just numerically stable solutions.</p>
+
+                <h3>Roles and Responsibilities</h3>
+                <p>This was a fully independent project conducted end-to-end, involving the following:</p>
                 <ul>
-                    <li>Prepared CAD: Modeled the critical impeller geometry and internal vessel features in SolidWorks to accurately represent the real system.</li>
-                    <li>Model simplification: Analysed the physical setup and justified simplifications — treated the system as single-phase (assumed minimal phase mixing) and steady-state for the purpose of mapping shear fields efficiently.</li>
-                    <li>CFD setup: Built the fluid volume mesh and solver setup in Ansys Fluent. Selected turbulence models and solver settings appropriate for low-Re, impeller-driven flow and ran simulations to convergence (residual k &lt;= 1e-3).</li>
-                    <li>Post-processing: Computed shear stress (dynamic viscosity × strain rate) and wall shear stress contours on planes and surfaces to localize maximum shear regions inside the vessel.</li>
-                    <li>Scale testing: Used the validated 500mL model as a reference to run parameter sweeps at 125mL and 1L scales to determine operating points (impeller speed, fill volume) that reproduce the same shear profile.</li>
-                    <li>Data analysis & validation: Correlated CFD-predicted peak shear with empirical observations from the lab; iterated boundary conditions and mesh until CFD predictions aligned with measured outcomes.</li>
+                    <li><strong>Preparation of representative CAD:</strong> Identified and modeled the critical impeller geometry and internal vessel features in SolidWorks to accurately represent the geometry that drives shear generation.</li>
+                    <li><strong>Model simplification:</strong> Analysed the physical setup and justified simplifications — treated the system as single-phase (assumed minimal phase mixing) and steady-state for the purpose of mapping shear fields efficiently.</li>
+                    <li><strong>CFD setup:</strong> Built the fluid volume mesh and solver setup in Ansys Fluent. Selected turbulence models and solver settings appropriate for high‑Re, impeller‑driven flow and ran simulations to convergence (residuals k &lt;= 1e-3).</li>
+                    <li><strong>Post-processing:</strong> Computed shear stress (dynamic viscosity × strain rate) and wall shear stress contours on planes and surfaces to locate maximum shear regions inside the vessel.</li>
+                    <li><strong>Scale testing:</strong> Modeled and simulated smaller scale systems in SolidWorks/Fluent to test process parameters and obtain similar shear profiles; designed and conducted wet lab experiments to validate simulation results.</li>
+                    <li><strong>Process documentation:</strong> Drafted descriptive protocols for use of Fluent to rapidly simulate stirred‑tank systems, ensuring knowledge transfer at the end of the engagement.</li>
                 </ul>
 
-                <h3>Outcome</h3>
-                <p>The CFD analysis successfully identified where peak shear occurs in the spinner flask and allowed rapid in-silico screening of scale-up parameters. Using the CFD-derived parameter sets, lab testing produced spheroid products with consistent morphology across 125mL, 500mL, and 1L scales, supporting a scale-consistent manufacturing strategy. The computational approach reduced the need for repeated full-scale experiments and accelerated the process development timeline.</p>
+                <p style="float:right;max-width:40%;margin:0 0 1rem 1rem;"><img src="images/500mL-spinner.png" alt="CFD summary inset" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
 
-                <h3>What I learned</h3>
+                <h3>Outcomes</h3>
+                <p>The CFD analysis successfully identified where peak shear occurs in the spinner flask and allowed rapid in‑silico screening of scale‑up parameters. Using the CFD‑derived parameter sets, lab testing produced spheroid products with consistent morphology across multiple scales, supporting a scale‑consistent manufacturing strategy. The computational approach reduced the need for repeated full‑scale experiments and accelerated the process development timeline.</p>
+
+                <h3>Takeaways and Learnings</h3>
                 <ul>
-                    <li>Mesh quality and geometric fidelity matter — small geometric details around the impeller significantly affect local shear predictions.</li>
-                    <li>Appropriate simplifications (single-phase, steady-state) can be justified when validated against experiments, enabling many rapid parametric sweeps.</li>
-                    <li>Close collaboration with experimentalists is essential: CFD is only useful when tied to measurable biological outcomes.</li>
+                    <li>Geometric simplifications matter. Modeling every detail adds complexity with marginal benefits after a certain point; focus on features that influence key parameters to speed iteration.</li>
+                    <li>Mesh quality is critical — mesh convergence substantially improves shear prediction near the impeller.</li>
+                    <li>Practical testing remains essential. Simplified models accelerate iteration but must be validated experimentally to refine parameters.</li>
                 </ul>
 
-                <h3>What I would do differently</h3>
-                <p>With more compute budget and time, I would run transient multiphase simulations to capture any intermittent mixing or bubble entrainment effects and to predict time-varying shear exposures. I would also couple particle-based models for spheroid motion and deformation to more directly simulate biological stress. These additions would increase fidelity but at the cost of much longer compute time; therefore I used a pragmatic steady-state approach for rapid parameter exploration.</p>
-
-                <h3>Why I didn't do that originally</h3>
-                <p>The project required rapid iteration across many parameter combinations to identify scale-consistent operating windows. Transient multiphase or particle-coupled models are far more computationally expensive and would have prevented timely decision-making during the co-op. The steady-state single-phase model provided the right balance of predictive value and speed when validated against lab data.</p>
+                <h3>Potential improvements</h3>
+                <p>Given the tight timeline, the model relied on significant geometric simplifications and a single‑phase approach. With more time, I would:</p>
+                <ul>
+                    <li>Implement a transient model to understand shear evolution during impeller start‑up and time‑varying behaviour.</li>
+                    <li>Introduce two‑phase modeling to assess whether phase mixing meaningfully affects the physics of interest.</li>
+                    <li>Conduct a full mesh‑independence study to quantify discretization error.</li>
+                    <li>Evaluate alternative turbulence models (e.g., RSM or k‑ω SST variants) to study sensitivity and improve shear predictions.</li>
+                    <li>Perform basic uncertainty quantification to evaluate robustness of the simulation.</li>
+                </ul>
             </div>
         </div>
     </div>
