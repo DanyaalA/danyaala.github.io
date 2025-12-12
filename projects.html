@@ -286,6 +286,12 @@
             <span class="close" onclick="closeModal('modal_thruster')">&times;</span>
             <h2>Design of a Nozzle for a CO2 Cold-Gas Thruster</h2>
             <div class="modal-details">
+                <p style="text-align:center;margin:0.5rem 0;">
+                    <img src="images/mach_number_contour.png" alt="Mach number contour" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'">
+                    <br>
+                    <small style="color:#666;display:block;margin-top:0.5rem;">Mach number contour — shows the supersonic expansion region and peak Mach near the nozzle exit (~M=2.5)</small>
+                </p>
+
                 <h3>Project Overview</h3>
                 <p>This was a personal challenge to refresh propulsion basics: over one week I designed a nozzle to achieve Mach 2.5 out of a cold‑gas thruster. I started with hand calculations assuming isentropic, 1‑D ideal gas flow, then modelled the geometry in SolidWorks and simulated it in Ansys Fluent to validate the calculations. Simulation results matched the hand calculations closely while highlighting areas for improvement given longer development time.</p>
 
@@ -302,6 +308,22 @@
 
                 <h3>Outcomes</h3>
                 <p>Fluent validated the predicted state through critical nozzle sections; the simulations also revealed thermal constraints and potential failure modes tied to the chosen propellant.</p>
+
+                <h3>Simulation Figures &amp; Notes</h3>
+                <figure class="modal-figure modal-figure-center" style="max-width:70%;">
+                    <img src="images/Velocity_contour.png" alt="Velocity contour" onerror="this.src='images/placeholder.svg'">
+                    <figcaption>Velocity contour — highlights acceleration through the throat into the supersonic nozzle and axial velocity profile.</figcaption>
+                </figure>
+
+                <figure class="modal-figure modal-figure-center" style="max-width:70%;">
+                    <img src="images/static_pressure_contour.png" alt="Static pressure contour" onerror="this.src='images/placeholder.svg'">
+                    <figcaption>Static pressure contour — shows pressure drop across the expansion and any over/under‑expansion features in the plume.</figcaption>
+                </figure>
+
+                <figure class="modal-figure modal-figure-center" style="max-width:70%;">
+                    <img src="images/static_temp_contour.png" alt="Static temperature contour" onerror="this.src='images/placeholder.svg'">
+                    <figcaption>Static temperature contour — indicates cooling in the expansion region and thermal gradients relevant to propellant constraints.</figcaption>
+                </figure>
 
                 <h3>Takeaways and Learnings</h3>
                 <ul>
