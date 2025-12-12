@@ -877,3 +877,39 @@ body {
 .mb-1 { margin-bottom: 0.5rem; }
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
+
+/* Modal figure helpers */
+.modal-details::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.modal-figure {
+    margin: 0 0 1rem 0;
+}
+
+.modal-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.modal-figure.modal-figure-center {
+    max-width: 60%;
+    margin: 0.75rem auto;
+}
+
+.modal-figure.modal-figure-right {
+    float: right;
+    max-width: 40%;
+    margin-left: 1rem;
+}
+
+.modal-figure figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.25rem;
+}

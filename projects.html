@@ -222,7 +222,7 @@
             <span class="close" onclick="closeModal('modal_mars')">&times;</span>
             <h2>Designing an Encapsulated Life-Detection Chip and Fluorometer</h2>
             <div class="modal-details">
-                <p style="text-align:center;margin:0.5rem 0;"><img src="images/demo setup.png" alt="Demo setup" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
+                <p style="text-align:center;margin:0.5rem 0;"><img src="images/demo-setup.png" alt="Demo setup" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
 
                 <h3>Project Overview</h3>
                 <p>On UBC Rover’s Science Subteam, we work to quantify the presence of life and habitability of Mars based on biomarker detection in soil samples. With historical methods relying on bulky onboard spectrophotometers and preloaded cuvettes, I designed microfluidic cartridges to perform encapsulated life‑detection assays. These chips are preloaded with lyophilized stains, contain a micromixer to combine the input sample and stain, and end in a viewing window which enables fluorometric analysis — all with less than 3 mL of sample and dye.</p>
@@ -233,11 +233,21 @@
                 <h3>Roles and Responsibilities</h3>
                 <ul>
                     <li><strong>CAD &amp; simulation:</strong> Designed and simulated fluid flow within the micromixer to ensure laminar flow and evaluate pressure drops; modeled the chip and support hardware in SolidWorks.</li>
-                    <li style="clear:both;margin-top:0.75rem;"><figure style="margin:0;max-width:100%;"><img src="images/fluidevice resazurin 2 mixer reynolds.png" alt="Flui'device simulation" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"><figcaption style="font-size:0.9rem;color:#666;margin-top:0.25rem;">2D development simulation of two-input flow Reynolds number</figcaption></figure></li>
-                    <li>Prototyping: Developed printing and post‑processing methodology using an in‑house FormLabs Form3B+ SLA printer, iterating geometries to reduce material use while preserving functionality.</li>
+                </ul>
+                <figure class="modal-figure modal-figure-center">
+                    <img src="images/fluidevice-resazurin-2-mixer-reynolds.png" alt="Flui'device simulation" onerror="this.src='images/placeholder.svg'">
+                    <figcaption>2D development simulation of two-input flow Reynolds number</figcaption>
+                </figure>
+                <ul>
+                    <li><strong>Prototyping:</strong> Developed printing and post‑processing methodology using an in‑house FormLabs Form3B+ SLA printer, iterating geometries to reduce material use while preserving functionality.</li>
                     <li><strong>Excitation LED circuit design:</strong> Used Altium to design the power and filtration circuit for the fluorometer LED, adding a step‑down regulator and robust decoupling. Bench‑tested the circuit on perfboard before ordering PCBs.</li>
-                    <li style="margin-top:0.75rem;"><figure style="margin:0;max-width:100%;float:right;max-width:40%;margin-left:1rem;"><img src="images/excitation_circuit.png" alt="Excitation circuit schematic" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"><figcaption style="font-size:0.9rem;color:#666;margin-top:0.25rem;">Altium PCB Schematic of Excitation Circuit</figcaption></figure></li>
-                    <li>Electronics integration: Implemented PCB best practices (component placement, ground planes, decoupling, analog routing) to reduce EMI and maintain signal integrity in low‑light photodetection environments.</li>
+                    </ul>
+                    <figure class="modal-figure modal-figure-right">
+                        <img src="images/excitation_circuit.png" alt="Excitation circuit schematic" onerror="this.src='images/placeholder.svg'">
+                        <figcaption>Altium PCB Schematic of Excitation Circuit</figcaption>
+                    </figure>
+                <ul>
+                    <li><strong>Integration:</strong> Implemented PCB best practices (component placement, ground planes, decoupling, analog routing) to reduce EMI and maintain signal integrity in low‑light photodetection environments.</li>
                 </ul>
 
                 <h3>Outcomes</h3>
@@ -253,9 +263,6 @@
 
                 <h3>Future improvements</h3>
                 <p>I plan to learn and apply residence time analysis and reaction‑coupled models to better predict diffusive mixing and reaction kinetics of dyes with soil samples inside the microfluidic chip.</p>
-
-                <h3>Additional assets</h3>
-                <p>If you have more Rover photos, schematics, or Altium exports, upload them and I will embed them inline.</p>
             </div>
         </div>
     </div>
