@@ -117,14 +117,14 @@
                 <p>The goal was to characterise the internal shear environment of a Corning ProCulture 500mL disposable spinner flask used for aggregate-based cell culture, and to use that information to identify process parameters that produce equivalent shear profiles across multiple scales. This enabled scale-consistent culture of shear-sensitive cellular spheroids as part of a scalable bioprocess strategy at Aspect Biosystems.</p>
 
                 <h3>The Challenge</h3>
-                <p>Stirred-tank reactors, particularly paddle impellers, produce highly localized regions of elevated shear and complex flow patterns. Capturing these correctly requires careful geometric representation of the impeller and realistic boundary conditions. The challenge was to predict peak shear regions that correlate with biological outcomes (spheroid viability and morphology) while keeping simulations computationally tractable for many scale comparisons. Empirical validation is required, so the CFD had to converge to physically realistic results, not just numerically stable solutions.</p>
+                <p>Stirred-tank reactors, particularly paddle impellers, produce highly localized regions of elevated shear and complex flow patterns. Capturing these correctly requires careful geometric representation of the impeller and realistic boundary conditions. The challenge was to predict peak shear regions that correlate with biological outcomes (spheroid viability and morphology) while balancing the computational efficiency and biological accuracy. It was also crucial that the simulations not only converged numerically, but produced physically realistic results.</p>
 
                 <h3>Roles and Responsibilities</h3>
                 <p>This was a fully independent project conducted end-to-end, involving the following:</p>
                 <ul>
-                    <li><strong>Preparation of representative CAD:</strong> Identified and modeled the critical impeller geometry and internal vessel features in SolidWorks to accurately represent the geometry that drives shear generation.</li>
+                    <li><strong>Preparation of representative CAD:</strong> Identified and modeled the critical features of the impeller and internal vessel, modeling them in SolidWorks to accurately represent the drivers of shear generation and propagation.</li>
                     <li><strong>Model simplification:</strong> Analysed the physical setup and justified simplifications — treated the system as single-phase (assumed minimal phase mixing) and steady-state for the purpose of mapping shear fields efficiently.</li>
-                    <li><strong>CFD setup:</strong> Built the fluid volume mesh and solver setup in Ansys Fluent. Selected turbulence models and solver settings appropriate for high‑Re, impeller‑driven flow and ran simulations to convergence (residuals k &lt;= 1e-3).</li>
+                    <li><strong>CFD setup:</strong> Built the fluid volume mesh and solver setup in Ansys Fluent. Selected turbulence models and solver settings appropriate for high‑Re, impeller‑driven flow and ran simulations to convergence (residuals k &lt;= 1e-3). Gut checks performed with hand calculations to ensure reaslistic results were generated</li>
                     <li><strong>Post-processing:</strong> Computed shear stress (dynamic viscosity × strain rate) and wall shear stress contours on planes and surfaces to locate maximum shear regions inside the vessel.</li>
                     <li><strong>Scale testing:</strong> Modeled and simulated smaller scale systems in SolidWorks/Fluent to test process parameters and obtain similar shear profiles; designed and conducted wet lab experiments to validate simulation results.</li>
                     <li><strong>Process documentation:</strong> Drafted descriptive protocols for use of Fluent to rapidly simulate stirred‑tank systems, ensuring knowledge transfer at the end of the engagement.</li>
@@ -138,8 +138,8 @@
                 <h3>Takeaways and Learnings</h3>
                 <ul>
                     <li>Geometric simplifications matter. Modeling every detail adds complexity with marginal benefits after a certain point; focus on features that influence key parameters to speed iteration.</li>
-                    <li>Mesh quality is critical — mesh convergence substantially improves shear prediction near the impeller.</li>
-                    <li>Practical testing remains essential. Simplified models accelerate iteration but must be validated experimentally to refine parameters.</li>
+                    <li>Mesh quality is critical. Though it seems obvious, I saw firsthand how mesh convergence improves shear prediction around the impeller itself</li>
+                    <li>Practical testing remains essential. Simplified models accelerate iteration but must be validated experimentally to refine parameters, particularly when working with biological systems.</li>
                 </ul>
 
                 <h3>Potential improvements</h3>
