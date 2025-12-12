@@ -17,6 +17,8 @@
     --border-color: #e6efee;
     --success-color: #10b981;
     --error-color: #ef4444;
+    --theme-color: #2f8f84; /* theme color for buttons */
+    --theme-color-dark: #246a60; /* darker shade of theme color */
 }
 
 body {
@@ -134,13 +136,17 @@ body {
 }
 
 .btn-primary {
-    background-color: white;
-    color: var(--primary-color);
+    background-color: var(--theme-color); /* Use the theme color for the background */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove any border */
+    padding: 0.5rem 1rem; /* Add some padding */
+    border-radius: 4px; /* Slightly round the corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1rem; /* Adjust font size */
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--theme-color-dark); /* Darken the theme color on hover */
 }
 
 .btn-secondary {
