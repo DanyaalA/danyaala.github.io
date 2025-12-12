@@ -91,9 +91,9 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>UBC Mars Rover — Life‑Detection Module</h3>
-                        <p class="project-category">Team Lead · Instrumentation</p>
-                        <p>Led the science subteam to produce an automated life‑detection module, microfluidic instrumentation, and custom PCBs and sensors.</p>
+                        <h3>Instrumented Microfluidic Chip Design</h3>
+                        <p class="project-category">Microfluidics · SolidWorks · Fluid Simulation · PCB Design</p>
+                        <p>Design and prototyping of encapsulated microfluidic cartridges and a low‑noise fluorometer excitation circuit for life‑detection assays on the UBC Rover.</p>
                     </div>
                 </div>
             </div>
@@ -220,43 +220,42 @@
     <div id="modal_mars" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('modal_mars')">&times;</span>
-            <h2>UBC Mars Rover — Science Subteam</h2>
-            <div class="modal-images">
-                <img src="images/demo setup.png" alt="Mars Rover demo setup" onerror="this.src='images/placeholder.svg'">
-                <img src="images/fluidevice resazurin 2 mixer reynolds.png" alt="Flui'device simulation" onerror="this.src='images/placeholder.svg'">
-                <img src="images/excitation_circuit.png" alt="Fluorometer excitation circuit" onerror="this.src='images/placeholder.svg'">
-            </div>
+            <h2>Designing an Encapsulated Life-Detection Chip and Fluorometer</h2>
             <div class="modal-details">
-                <h3>What we were building</h3>
-                <p>As part of the UBC Mars Rover project, our science subteam developed an automated life‑detection module. A key piece was a microfluidic mixing chip that allowed cell viability assays with much smaller sample and reagent volumes, plus a custom fluorometer for readout.</p>
+                <p style="text-align:center;margin:0.5rem 0;"><img src="images/demo setup.png" alt="Demo setup" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
 
-                <h3>Why it was hard</h3>
-                <p>The microfluidic mixer needed to produce reliable, repeatable mixing at very low volumes while maintaining low shear for delicate biological samples. Matching flow regimes and pressure drops to achieve consistent assay conditions in a compact form factor was challenging. For the fluorometer, ensuring a noise‑free, stable LED excitation supply in a compact, battery‑powered instrument required careful analog design and PCB layout to prevent measurement artifacts.</p>
+                <h3>Project Overview</h3>
+                <p>On UBC Rover’s Science Subteam, we work to quantify the presence of life and habitability of Mars based on biomarker detection in soil samples. With historical methods relying on bulky onboard spectrophotometers and preloaded cuvettes, I designed microfluidic cartridges to perform encapsulated life‑detection assays. These chips are preloaded with lyophilized stains, contain a micromixer to combine the input sample and stain, and end in a viewing window which enables fluorometric analysis — all with less than 3 mL of sample and dye.</p>
 
-                <h3>What I did (role and methods)</h3>
+                <h3>Challenges</h3>
+                <p>The microfluidic chip needed to efficiently and repeatably mix samples and reagents within a minimal form factor while minimizing SLA resin usage for cost effectiveness. For the fluorometer, providing a noise‑free, stable power supply to the excitation LED in a noisy onboard power environment required careful analog circuit and PCB design.</p>
+
+                <h3>Roles and Responsibilities</h3>
                 <ul>
-                    <li>Microfluidic design: Designed a microfluidic mixing chip in Flui'idevice to rapidly evaluate flow regimes and pressure drops, iterated the geometry to minimize dead volume and ensure laminar mixing for assay consistency.</li>
-                    <li>Prototyping: Manufactured chips using SLA printing and post-processing to validate fabrication tolerances and flow behavior.</li>
-                    <li>Fluorometer excitation circuit: Designed the LED excitation circuit in Altium, adding a step‑down regulator and robust decoupling to provide a stable, low‑noise LED supply. Bench‑tested the circuit using perfboard/THT components before committing to PCB manufacturing.</li>
-                    <li>Electronics integration: Implemented PCB design practices (component placement, ground planes, decoupling, and analog routing) to reduce EMI and maintain signal integrity in low‑light photodetection environments.</li>
-                    <li>Systems integration and testing: Integrated microfluidic chips with the fluorometer and developed benchtop assays to validate viability readouts with reduced reagent volumes.</li>
+                    <li><strong>CAD &amp; simulation:</strong> Designed and simulated fluid flow within the micromixer to ensure laminar flow and evaluate pressure drops; modeled the chip and support hardware in SolidWorks.</li>
+                    <li style="clear:both;margin-top:0.75rem;"><figure style="margin:0;max-width:100%;"><img src="images/fluidevice resazurin 2 mixer reynolds.png" alt="Flui'device simulation" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"><figcaption style="font-size:0.9rem;color:#666;margin-top:0.25rem;">2D development simulation of two-input flow Reynolds number</figcaption></figure></li>
+                    <li>Prototyping: Developed printing and post‑processing methodology using an in‑house FormLabs Form3B+ SLA printer, iterating geometries to reduce material use while preserving functionality.</li>
+                    <li><strong>Excitation LED circuit design:</strong> Used Altium to design the power and filtration circuit for the fluorometer LED, adding a step‑down regulator and robust decoupling. Bench‑tested the circuit on perfboard before ordering PCBs.</li>
+                    <li style="margin-top:0.75rem;"><figure style="margin:0;max-width:100%;float:right;max-width:40%;margin-left:1rem;"><img src="images/excitation_circuit.png" alt="Excitation circuit schematic" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"><figcaption style="font-size:0.9rem;color:#666;margin-top:0.25rem;">Altium PCB Schematic of Excitation Circuit</figcaption></figure></li>
+                    <li>Electronics integration: Implemented PCB best practices (component placement, ground planes, decoupling, analog routing) to reduce EMI and maintain signal integrity in low‑light photodetection environments.</li>
                 </ul>
 
-                <h3>Outcome</h3>
-                <p>The microfluidic mixer enabled cell viability assays with substantially reduced sample and reagent consumption, and the fluorometer excitation circuit delivered low‑noise illumination suitable for sensitive photometric reads. The combined system supported onboard assay prototyping and reduced resource requirements for field testing on the rover platform.</p>
+                <h3>Outcomes</h3>
+                <p>Work is ongoing, but the excitation LED circuit has been proven on bench and PCBs have been sent for manufacture. The microfluidic chip design is validated for 3D printing and optimized for material use; next steps include sensor integration and photodetector circuit development.</p>
 
-                <h3>What I learned</h3>
+                <h3>Takeaways and Learnings</h3>
                 <ul>
-                    <li>Early simulation in domain-specific tools (Flui'idevice) speeds up iteration for microfluidic geometries and prevents costly fabrication cycles.</li>
-                    <li>Analog design fundamentals (decoupling, layout, and grounding) are critical for reliable optical measurement systems.</li>
+                    <li>Design for manufacturability (DFM) is crucial: manufacturing constraints must inform early design choices.</li>
+                    <li>Early, domain‑specific simulation accelerates iteration and reduces costly prototype cycles.</li>
+                    <li>Analog design fundamentals (decoupling, layout, grounding) are essential for reliable optical measurement systems.</li>
                     <li>Prototyping on perfboard is valuable for validating circuit concepts before committing to PCB fabrication.</li>
                 </ul>
 
-                <h3>What I would do differently</h3>
-                <p>Given more time I would run a co‑simulation that links microfluidic CFD/flow with the optical readout to better predict assay signal as a function of flow-induced shear and residence time. I would also add more formal EMC testing early in the PCB cycle to further reduce noise risk.</p>
+                <h3>Future improvements</h3>
+                <p>I plan to learn and apply residence time analysis and reaction‑coupled models to better predict diffusive mixing and reaction kinetics of dyes with soil samples inside the microfluidic chip.</p>
 
                 <h3>Additional assets</h3>
-                <p>If you have more Rover photos, schematics, or Altium exports you can upload them and I will embed them here. (Note: the Mend the Gap video belongs to the spinal cord project — please upload that video and I will add it to the Mend the Gap modal.)</p>
+                <p>If you have more Rover photos, schematics, or Altium exports, upload them and I will embed them inline.</p>
             </div>
         </div>
     </div>
