@@ -85,7 +85,7 @@
                 <!-- UBC Mars Rover -->
                 <div class="project-card" data-category="mechanical" id="marsrover">
                     <div class="project-image">
-                        <img src="images/project_marsrover.jpg" alt="UBC Mars Rover" onerror="this.src='images/placeholder.svg'">
+                        <img src="images/demo-setup.png" alt="UBC Mars Rover" onerror="this.src='images/placeholder.svg'">
                         <div class="project-overlay">
                             <button class="btn-view" onclick="openModal('modal_mars')">View Details</button>
                         </div>
@@ -94,6 +94,20 @@
                         <h3>Instrumented Microfluidic Chip Design</h3>
                         <p class="project-category">Microfluidics · SolidWorks · Fluid Simulation · PCB Design</p>
                         <p>Design and prototyping of encapsulated microfluidic cartridges and a low‑noise fluorometer excitation circuit for life‑detection assays on the UBC Rover.</p>
+                    </div>
+                </div>
+                <!-- Cold-Gas Thruster Nozzle Design -->
+                <div class="project-card" data-category="mechanical" id="thruster">
+                    <div class="project-image">
+                        <img src="images/Velocity_contour.png" alt="Cold-gas thruster CFD" onerror="this.src='images/placeholder.svg'">
+                        <div class="project-overlay">
+                            <button class="btn-view" onclick="openModal('modal_thruster')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cold-Gas Thruster Nozzle Design</h3>
+                        <p class="project-category">Computational Fluid Dynamics · Jet Propulsion · Mechanical</p>
+                        <p>Design and CFD validation of a converging-diverging nozzle for a CO2 cold-gas thruster, targeting Mach 2.5 exit velocity using isentropic design and Ansys Fluent verification.</p>
                     </div>
                 </div>
             </div>
@@ -263,6 +277,45 @@
 
                 <h3>Future improvements</h3>
                 <p>I plan to learn and apply residence time analysis and reaction‑coupled models to better predict diffusive mixing and reaction kinetics of dyes with soil samples inside the microfluidic chip.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_thruster" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal_thruster')">&times;</span>
+            <h2>Design of a Nozzle for a CO2 Cold-Gas Thruster</h2>
+            <div class="modal-details">
+                <h3>Project Overview</h3>
+                <p>This was a personal challenge to refresh propulsion basics: over one week I designed a nozzle to achieve Mach 2.5 out of a cold‑gas thruster. I started with hand calculations assuming isentropic, 1‑D ideal gas flow, then modelled the geometry in SolidWorks and simulated it in Ansys Fluent to validate the calculations. Simulation results matched the hand calculations closely while highlighting areas for improvement given longer development time.</p>
+
+                <h3>The Challenges</h3>
+                <p>Key challenges included:</p>
+                <ul>
+                    <li><strong>Propellant selection:</strong> I used 800 psi CO2 canisters for prototyping availability. Calculations showed CO2 approaches sublimation in the expansion — a signal to consider alternative propellants for future iterations.</li>
+                    <li><strong>Balancing design with timelines:</strong> Learning and applying the Method of Characteristics (MoC) was desirable but infeasible in one week, so I prioritized a practical converging–diverging nozzle design instead.</li>
+                    <li><strong>CFD stability:</strong> Supersonic, compressible flows required solver tuning, alternative turbulence models, and careful BCs to reach converged, physically realistic solutions.</li>
+                </ul>
+
+                <h3>Roles</h3>
+                <p>As an independent project I handled all work: hand calculations for choked flow and Mach 2.5 exit, SolidWorks nozzle design suitable for SLA printing, and setup & simulation in Ansys Fluent.</p>
+
+                <h3>Outcomes</h3>
+                <p>Fluent validated the predicted state through critical nozzle sections; the simulations also revealed thermal constraints and potential failure modes tied to the chosen propellant.</p>
+
+                <h3>Takeaways and Learnings</h3>
+                <ul>
+                    <li>Tradeoffs are central to propulsion design — small efficiency gains often carry cost/weight penalties.</li>
+                    <li>Physical propellant properties (e.g., sublimation) can dominate design choices.</li>
+                    <li>Axisymmetric modeling is a useful computational shortcut: simulating half the domain saves compute while preserving key flow features.</li>
+                </ul>
+
+                <h3>Future Plans</h3>
+                <ul>
+                    <li>Redesign around a propellant that won't sublimate during expansion.</li>
+                    <li>Tune exit pressure to avoid under/overexpansion and improve Isp.</li>
+                    <li>Explore MoC-based nozzle design and design a test jig with pressure transducers to measure thrust on a printed model.</li>
+                </ul>
             </div>
         </div>
     </div>
