@@ -55,7 +55,7 @@
                 <!-- Bioreactor Platform -->
                 <div class="project-card" data-category="biomedical" id="bioreactor">
                     <div class="project-image">
-                        <img src="images/500mL-spinner.png" alt="500mL Spinner CFD - Aspect Biosystems" onerror="this.src='images/placeholder.svg'">
+                        <img src="images/500mL Spinner CFD Fluent_cropped.png" alt="500mL Spinner CFD - Aspect Biosystems" onerror="this.src='images/placeholder.svg'">
                         <div class="project-overlay">
                             <button class="btn-view" onclick="openModal('modal_bioreactor')">View Details</button>
                         </div>
@@ -97,20 +97,6 @@
                         <p>Design and CFD validation of a converging-diverging nozzle for a CO2 cold-gas thruster, targeting Mach 2.5 exit velocity using isentropic design and Ansys Fluent verification.</p>
                     </div>
                 </div>
-                <!-- 3D In-vitro Spinal Cord Modeling -->
-                <div class="project-card" data-category="research" id="spinal">
-                    <div class="project-image">
-                        <img src="images/project_spinal.jpg" alt="3D Spinal Cord Model" onerror="this.src='images/placeholder.svg'">
-                        <div class="project-overlay">
-                            <button class="btn-view" onclick="openModal('modal_spinal')">View Details</button>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>3‑D In‑Vitro Spinal Cord Injury Modeling</h3>
-                        <p class="project-category">Research · Microfluidics</p>
-                        <p>Microfluidic chip design and GelMA hydrogel modelling to replicate SCI microsystems and evaluate material performance.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -125,7 +111,7 @@
             <div class="modal-details">
                 <p><strong>Confidentiality note:</strong> The image shown is a representative example based on publicly available geometry. Any CFD data or design details specific to my work at Aspect Biosystems have been excluded to maintain NDA compliance.</p>
 
-                <p style="text-align:center;margin:0.5rem 0;"><img src="images/500mL-spinner.png" alt="Summarized CFD model" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
+                <p style="text-align:center;margin:0.5rem 0;"><img src="images/500mL Spinner CFD Fluent_cropped.png" alt="Summarized CFD model" style="max-width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
 
                 <h3>Project Overview</h3>
                 <p>The goal was to characterise the internal shear environment of a Corning ProCulture 500mL disposable spinner flask used for aggregate-based cell culture, and to use that information to identify process parameters that produce equivalent shear profiles across multiple scales. This enabled scale-consistent culture of shear-sensitive cellular spheroids as part of a scalable bioprocess strategy at Aspect Biosystems.</p>
@@ -144,7 +130,7 @@
                     <li><strong>Process documentation:</strong> Drafted descriptive protocols for use of Fluent to rapidly simulate stirred‑tank systems, ensuring knowledge transfer at the end of the engagement.</li>
                 </ul>
 
-                <p style="float:right;max-width:40%;margin:0 0 1rem 1rem;"><img src="images/500mL-spinner.png" alt="CFD summary inset" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
+                <p style="float:right;max-width:40%;margin:0 0 1rem 1rem;"><img src="images/500mL Spinner CFD Fluent_cropped.png" alt="CFD summary inset" style="width:100%;height:auto;" onerror="this.src='images/placeholder.svg'"></p>
 
                 <h3>Outcomes</h3>
                 <p>The CFD analysis successfully identified where peak shear occurs in the spinner flask and allowed rapid in‑silico screening of scale‑up parameters. Using the CFD‑derived parameter sets, lab testing produced spheroid products with consistent morphology across multiple scales, supporting a scale‑consistent manufacturing strategy. The computational approach reduced the need for repeated full‑scale experiments and accelerated the process development timeline.</p>
@@ -178,57 +164,34 @@
             </div>
             <div class="modal-details">
                 <h3>What we were building (the point)</h3>
-                <p>The goal was to experimentally determine how far 405&nbsp;nm light penetrates into a GelMA photocrosslinking hydrogel — an essential parameter for assessing whether a light‑cured implant could fully polymerize within a spinal cord injury site. A previous simulation predicted depth of cure; my task was to design and execute an experiment to validate (or challenge) those predictions using a controlled physical setup.</p>
+                <p>Determine the practical depth of photocuring for GelMA under 405&nbsp;nm illumination to evaluate whether a light‑cured implant could reliably polymerize in a spinal cord injury microenvironment. The intent was to close the loop between simulation and experiment and quantify where the simulation was misleading.</p>
 
                 <h3>Why it was hard</h3>
-                <p>Light propagation in hydrated biomaterials is complex: scattering, absorption, and refractive interfaces all influence photocrosslinking depth. Small geometric or optical artifacts — especially reflections or refraction from the substrate — can cause the apparent cured depth to deviate significantly from true in‑situ behaviour. Creating an experimental setup that isolated the gel’s intrinsic optical properties required careful control of stray light, elimination of indirect curing pathways, and a geometry that allowed precise sectioning of the cured column for visual analysis. Physically meaningful results relied on eliminating every unintended transmission path.</p>
+                <p>Hydrogels scatter and absorb light; PDMS and fixture materials refract and reflect it. These optical interactions mean the simulated irradiance can differ markedly from the irradiance experienced by the gel in an experiment. Small geometric tolerances or stray light paths produce large errors in apparent cure depth, so the experimental rig had to eliminate indirect illumination and isolate the gel’s intrinsic response.</p>
 
                 <h3>What I did (role and methods)</h3>
                 <ul>
-                    <li><strong>Experimental design:</strong> Built a controlled setup to expose a vertical GelMA column to 405&nbsp;nm light, enabling direct visual determination of cured vs uncured regions after sectioning.</li>
-                    <li><strong>CAD &amp; prototyping:</strong> Designed SolidWorks master molds for PDMS jigs that cast a uniform cylindrical gel column. Iterated prototype geometries to minimise light leakage or refraction from the PDMS substrate.</li>
-                    <li><strong>Optical isolation:</strong> Designed and fabricated a light‑blocking shroud so only direct, axial illumination reached the gel — preventing PDMS‑induced refraction that could artificially inflate the observed cure depth.</li>
-                    <li><strong>Verification method:</strong> Cured samples, manually sectioned the gel column, and visually identified the boundary between crosslinked and uncrosslinked layers for depth measurement.</li>
-                    <li><strong>Model refinement:</strong> Compared experimental results with the simulation; observed a consistent ~3× lower cured depth than predicted and recommended full optical characterisation (absorption, scattering, refractive index) of GelMA and PDMS to update the model parameters.</li>
+                    <li><strong>Rig design:</strong> CAD'd and 3D‑printed PDMS master molds to cast a reproducible cylindrical GelMA column and iterated geometry to remove edge effects.</li>
+                    <li><strong>Optical control:</strong> Built a light‑blocking shroud and axial illumination fixture to ensure only direct 405&nbsp;nm light reached the gel column.</li>
+                    <li><strong>Experiment:</strong> Exposed gel columns for controlled doses, sectioned samples, and recorded the cured/uncured boundary for depth measurement.</li>
+                    <li><strong>Model comparison:</strong> Compared measured cure depths with the optical simulation and used the discrepancy to identify missing material optical properties (absorption/scattering/refractive index).</li>
                 </ul>
 
                 <h3>Outcome</h3>
-                <p>The experiment demonstrated a significant discrepancy — roughly a threefold overestimation — in the simulation’s predicted cure depth. This prompted a redesign of the optical model and provided the team with a clearer understanding of the constraints on photocuring within tissue‑like environments. The test jig and shroud designs now serve as reusable tools for subsequent characterisation experiments.</p>
+                <p>Measured cure depths were roughly three times smaller than the simulation predicted. That discrepancy prompted immediate revision of the optical model inputs and delivered a practical understanding of the limitations on in‑situ photocuring. The test jig and shroud are reusable and now standard for follow‑up characterisation.</p>
 
                 <h3>What I learned</h3>
                 <ul>
-                    <li>Even simple curing experiments require rigorous optical control; substrate‑induced refraction can meaningfully distort results.</li>
-                    <li>CAD iteration is essential for experimental fixtures — small geometric changes can drastically alter light paths.</li>
-                    <li>Photopolymerisation behaviour depends heavily on material‑specific optical properties, not only intensity and exposure time.</li>
-                    <li>Empirical validation is indispensable — simulations can be misleading without accurate material constants.</li>
+                    <li>Control of stray light and substrate optics is critical for accurate photopolymerisation experiments.</li>
+                    <li>Small fixture geometry changes can qualitatively change measured outcomes; rapid CAD iteration is high‑leverage.</li>
+                    <li>Simulations must be seeded with measured optical constants — otherwise they risk directional but quantitatively incorrect predictions.</li>
                 </ul>
 
                 <h3>What I would do differently</h3>
-                <p>With more time I would measure absorption coefficient, scattering coefficient, and refractive index of both GelMA and PDMS to provide accurate optical inputs to the simulation. I would also incorporate quantitative analysis (optical microscopy or mechanical indentation) to obtain a precise numerical depth of cure rather than relying solely on visual inspection.</p>
-
-                <h3>Why I didn’t do that originally</h3>
-                <p>Time constraints limited deeper material characterisation. The priority was to quickly determine whether the existing simulation was directionally accurate. A rapid, well‑controlled empirical experiment provided the clarity needed to prompt simulation revision while keeping the project on schedule.</p>
-
-                <h3>Additional assets</h3>
-                <p>Upload the Mend the Gap video as <code>videos/mend-the-gap.mp4</code> to embed it here. You can also add photos or microscopy images from the sectioned gels and I will include them inline.</p>
-
-                <div class="modal-video" style="margin-top:1rem;">
-                    <video controls width="100%" poster="images/placeholder.svg">
-                        <source src="videos/mend-the-gap.mp4" type="video/mp4">
-                        Your browser does not support the video tag. Upload <code>videos/mend-the-gap.mp4</code> into the repository to enable playback.
-                    </video>
-                </div>
+                <p>With more time I would measure GelMA and PDMS absorption and scattering coefficients and the refractive index, then re‑run the optical model. I would also add quantitative microscopy or mechanical testing to replace subjective visual sectioning with a precise depth metric.</p>
             </div>
-                <h3>Additional assets</h3>
-                <p>I prepared a local video placeholder — upload your Mend the Gap video as <code>videos/mend-the-gap.mp4</code> and it will appear below. You can also upload additional chip schematics or experimental videos and I will embed them here.</p>
-
-                <div class="modal-video" style="margin-top:1rem;">
-                    <video controls width="100%" poster="images/placeholder.svg">
-                        <source src="videos/mend-the-gap.mp4" type="video/mp4">
-                        Your browser does not support the video tag. Upload <code>videos/mend-the-gap.mp4</code> into the repository to enable playback.
-                    </video>
-                </div>
-            </div>
+        </div>
+    </div>
         </div>
     </div>
 
