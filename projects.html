@@ -97,6 +97,21 @@
                         <p>Design and CFD validation of a converging-diverging nozzle for a CO2 cold-gas thruster, targeting Mach 2.5 exit velocity using isentropic design and Ansys Fluent verification.</p>
                     </div>
                 </div>
+
+                <!-- Mars Rover Design -->
+                <div class="project-card" data-category="electromechanical" id="marsrover-design">
+                    <div class="project-image">
+                        <img src="images/rover.jpg" alt="Mars Rover Design" loading="lazy" onerror="this.src='images/placeholder.svg'">
+                        <div class="project-overlay">
+                            <button class="btn-view" onclick="openModal('modal_marsrover_design')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mars Rover Design</h3>
+                        <p class="project-category">Electromechanical Design</p>
+                        <p>This is the main project at UBC’s Mars Rover engineering design team, where I am a subteam lead. Our challenge is to develop a Mars rover capable of traversing complex terrain, carefully manipulating objects, lifting heavy loads, and testing for the presence of extraterrestrial life, all with as much autonomy as possible.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -241,6 +256,51 @@
 
                 <h3>Future improvements</h3>
                 <p>In terms of the fluid simulation improvements, I plan to learn and apply residence time analysis and reaction‑coupled models to better predict diffusive mixing and reaction kinetics of dyes with soil samples inside the chip. I'd also like to perform some more in-depth FEA of the chip itself, to understand if there is room to reduce material but retain strength.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_marsrover_design" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal_marsrover_design')">&times;</span>
+            <h2>Design of a Semi-Autonomous Mars Rover</h2>
+            <div class="modal-details">
+                <p><strong>Project Overview:</strong> This is the main project at UBC’s Mars Rover engineering design team, where I am a subteam lead. Our challenge is to develop a Mars rover capable of traversing complex terrain, carefully manipulating objects, lifting heavy loads, and testing for the presence of extraterrestrial life, all with as much autonomy as possible.</p>
+
+                <h3>The Challenge</h3>
+                <ul>
+                    <li>The rover must be constructed from as few COTS parts as possible</li>
+                    <li>The rover must be able to traverse complex terrain as autonomously as possible</li>
+                    <li>The rover must be capable of interacting with panels, switches, levels, and must be capable of carrying some weight from 5-10kgs.</li>
+                    <li>The rover must have an onboard payload to detect biomarkers of life in the soil</li>
+                </ul>
+
+                <h3>Roles and Responsibilities</h3>
+                <ul>
+                    <li>Design of a Rasberry Pi based serial control monitor for the communications antenna, enabling serial commands to drive a stepper motor, turning an antenna to face the rover at all times
+                        <ul>
+                            <li>Involving: DC Stepper motor control, Raspberry Pi, Python Scripting</li>
+                        </ul>
+                    </li>
+                    <li>Programming of a multitude of analog and digital probes for environmental readouts, including gas sensors, thermocouples, soil probes (NPK, pH, ORP)
+                        <ul>
+                            <li>Involving: Circuit design, Servo motor control, Arduino, Raspberry Pi, Python, C++</li>
+                        </ul>
+                    </li>
+                    <li>Design of a microfluidic life detection system (See Instrumented Microfluidic Chip Design project for more detail)
+                        <ul>
+                            <li>Including: Solidworks, ANSYS Fluent, Circuit Design, Photodiodes and Optical Design</li>
+                        </ul>
+                    </li>
+                    <li>Manufacturing of power connectors for the onboard PDB and power distribution system
+                        <ul>
+                            <li>Including: Soldering, XT connectors, BMSs, Electrical connectivity testing</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Outcomes</h3>
+                <p>This project is underway at UBC Rover as we make improvements after every year’s competition, but we have seen a great deal of success as a team. We were one of only 38 teams from across the world invited to the University Rover Challenge, with a stellar acceptance score of 92.64.</p>
             </div>
         </div>
     </div>
